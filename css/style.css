@@ -189,6 +189,7 @@ body{
 }
 .answer{
     display: none;
+    padding-bottom: 5px;
 }
 .question{
     display: flex;
@@ -262,7 +263,6 @@ footer{
     color: #219EBC;
     font-family: Just Another Hand;
     font-size: 96px;
-    font-style: normal;
     font-weight: 400;
     width: 481px;
 	margin-left: 4%; 
@@ -274,20 +274,16 @@ footer{
 }
 
 .program p{
+    text-align: center;
+    align-items: center;
     width: 238px;
-    margin-bottom: 20px;
     font-weight: 700;
     color: #023047;
-    font-size: 26px;
-    text-align: center;
-    /* 
-    justify-items: center;
-    align-items: center; 
-    justify-content: center;*/
+    font-weight: 700;
+    font-size: 24px;
 
 }
 
- */
  .card p{
     text-align: center;
     font-weight: 700;
@@ -339,19 +335,20 @@ footer{
     color: #FB8500;
 }
 .plans h3{
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .plans .card-2{
-    height: 500px;
+    height: 540px;
     width: 300px;
     background-color: #219EBC;
     border-radius: 45px;
     padding: 20px;
 }
 .plans ul{
+    
     text-align: start;
-    font-weight: 400;
+    font-weight: 600;
     width: 100%;
     font-size: 20px;
     padding: 20px;
@@ -383,7 +380,7 @@ form{
     padding: 22px;
 }
 input {
-    width: 915px;
+    width: 100%;
     height: 92px;
 	border-radius: 45px;
 	background: #219EBC;
@@ -397,7 +394,7 @@ input {
     padding: 30px;
 }
 .info p{
-	width: 915px;
+	width: 100%;
     height: 92px;
 	border-radius: 45px;
 	background: #219EBC;	
@@ -418,7 +415,7 @@ input {
 }
 select {
 	font-size: 25px;
-	width: 839px;
+	width: 100%;
 	border: none;
 	background: #219EBC;
 	color: #023047;
@@ -438,14 +435,7 @@ form button{
     align-content: center;
     margin: auto;
 }
-/* #error{
-    color: red;
-    font-size: 18px;
-    letter-spacing: 1px;
-    margin-top: 0px;
-    margin-bottom: 24px;
-    display: none;
-} */
+
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -467,6 +457,10 @@ form button{
     border-radius: 45px;
     margin-bottom: 30px;
 }
+.err{
+    color: red;
+}
+
 /* 
 .signup{
     flex-direction: column;   
@@ -484,12 +478,6 @@ form button{
 }
 */
 
-.err{
-    color: red;
-}
-
-
-
 /* .hamburger{
     display: none;
     cursor: pointer;
@@ -503,6 +491,8 @@ form button{
     transition: all 0.3s ease-in-out;
     background-color: #FB8500;
 }*/
+
+/* MOBILE */
 @media(max-width:768px){
 
     /* .hamburger{
@@ -527,7 +517,223 @@ form button{
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        .navbar{
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #FB8500;
+            padding: 0 24px;
+            
+        }
+        .nav-menu{
+            position: fixed;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        .navbar a{
+            font-size: 24px;
+            font-weight: 700;
+            color: #023047;
+            padding: 10px 22px;
+            border-radius: 4px;
+            transition: ease .40s;
+        }
+        .navbar a:hover{
+            background: #219EBC;
+            border-radius: 10px;
+        }
     } */
 
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .welcome-pic{
+        height: 422px;
+    }
+    .welcome h1{
+        font-size: 40px;
+    }
+    .welcome h2{
+        font-size: 24px;
+    }
+    
+    .rectangle {
+        position: relative;
+        bottom: 0;
+        height: fit-content;
+        width: 100%;
+    }
+    .rectangle h2{
+        font-size: 20px;
+    }
+    .rectangle p{
+        font-size: 16px;    
+    }
+    
+    .discover{
+        height: fit-content;
+    }
+    .discover h2{
+        font-size: 20px;
+    }
+  
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+    .container .card{
+        height: 300px;
+    }
+    .container .card img{
+        height: 215px;
+    }
+    .card a{ 
+        font-size: 15px;
+    }
+    
+    .testimonials{
+        height: fit-content;
+    }
+    .testimonials h2{
+        font-size: 20px;
+    }
+    .testimonials .card-2{
+        width: 300px;
+        height: fit-content; 
+    }
+    .testimonials p{
+        font-size: 16px;
+    }
+    
+    .FAQ{
+        height: fit-content;
+        padding-bottom: 40px;
+    }
+    footer{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .foot h2{
+        font-size: 96px;
+    }
+    .foot .description p{
+        width: 300px;
+        font-size: 16px;
+    }
+    .social{
+        justify-content: space-evenly;
+    }
+    .fa-instagram, .fa-facebook, .fa-whatsapp{
+        font-size: 40px;
+    }
+    .quick-links{
+        font-size: 16px;
+        padding-top: 20px;
+    }
+    .copyright{
+        height: fit-content;
+        font-size: 16px;
+        padding: 5px;
+    }
+        
+    .ourprograms{
+        height: 450px;
+    }
+    .ourprograms h1{
+        font-size: 40px;
+    }
+    .boxmma{
+        padding: 10px;
+    }
+    .program p{
+        font-size: 14px;
+    }
+    
+    .card p{
+        font-size: 14px;
+    }
+    .cardio{
+        padding: 10px;
+    }
+    .dance{
+        padding: 10px;
+    }
+    .musculation{
+        padding: 10px;
+    }
+    .joinus{
+        height: 450px;
+    }
+    .joinus h1{
+        font-size: 40px;
+    }
+    .plans{
+        font-size: 16px;
+        height: fit-content;
+    }
+    .plans .card-2{
+        height: fit-content;
+    }
+    .plans ul{
+        font-size: 16px;
+    }
+    .dontquit{
+        height: 200px;
+    }
+    .signup{
+        padding-bottom: 0px;
+        font-size: 16px;
+    }
+    .signup h2{
+        padding-bottom: 10px;
+    }
+    form{
+        padding-bottom: 22px;
+    }
+    input {
+        width: 100%;
+        font-size: 17px;    
+    }
+    .info{
+        width: 100%;
+    }
+    .info p{
+        width: 100%;
+    }
+
+    .infoform{ 
+        margin-bottom: 10px;
+    }
+    ::placeholder{
+        font-size: 16px;
+    }
+    select {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    form button{
+        font-size: 16px; 
+    }
+
+    .gallery{
+        gap: 10px;
+        height: fit-content;
+        
+    }
+    .gallery .card{
+        width: 300px;
+    }
     
 } 
