@@ -94,25 +94,25 @@
         <div class="signup">
             <h2>SIGN UP</h2>
 
-            <form action="/">
+            <form class="regitre-j" action="#">
                 <div class="info">
-                    <input class="infoform" type="text" id="firstname" name="firstname" placeholder="First name" required>
-                    <p id="error">Please enter a valid first name</p>
-                    <input class="infoform" type="text" id="lastname" name="lastname" placeholder="Last name" required>
-                    <p id="error">Please enter a valid last name</p>
-                    <input class="infoform" type="text" id="cin" name="cin" placeholder="CIN" required>
-                    <p id="error">Please enter a valid cin</p>
-                    <input class="infoform" type="" id="Phone" name="Phone" placeholder="Phone Number" required>
-                    <p id="error">Please enter a valid phone number</p>
+                    <input class="infoform" type="text" id="firstname" name="firstname" placeholder="First name" >
+                    <span id="firstNameError" class="err"></span>
+                    <input class="infoform" type="text" id="lastname" name="lastname" placeholder="Last name" >
+                    <span id="lastNameError" class="err"></span>
+                    <input class="infoform" type="text" id="cin" name="cin" placeholder="CIN" >
+                    <span id="cinError" class="err"></span>
+                    <input class="infoform" type="" id="tel" name="Phone" placeholder="Phone Number" >
+                    <span id="telError" class="err"></span>
                     <p class="infoform">
-                        <select name="plan" required placeholder="You Chosen Plan">
-                        <option  value="classic offer">Classic Offer</option>
+                        <select name="plan" id="plans" placeholder="You Chosen Plan" required>
+                        <option value="classic offer">Classic Offer</option>
                         <option value="comfort">Comfort</option>
                         <option value="health">Health</option>
                         </select>
                     </p>
                 </div>
-                <a type="submit" href="/">JOIN</a>
+                <button type="submit">JOIN</button>
             </form>
         </div>
 
@@ -138,7 +138,7 @@
             <ul>
                 <li>HOME</li>
                 <li>PROGRAM</li>
-                <li>GALLER</li>
+                <li>GALLERY</li>
                 <li>JOIN US</li>
             </ul>
         </div>
@@ -148,6 +148,6 @@
         <p>ALL RIGHTS RESERVED ©  FitZone 2023</p>
     </div>
 
-    <script src="./js/script.js></script>
+    <script src="./js/script.js" ></script>
 </body>
 </html>

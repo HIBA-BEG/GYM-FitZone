@@ -12,49 +12,9 @@
 	--darkblue: #023047;
 	--orange: #FB8500;
     --lightblue: #219EBC;
-	/*--main-color: #6e54fa;
-	--big-font: 6rem;
-	--h2-font: 3rem;
-	--p-font: 1.1rem; */
 }
-/* .hamburger{
-    display: none;
-    cursor: pointer;
-}
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-animation: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #FB8500;
-}
-@media(max-width:768px){
-    .hamburger{
-        display: block;
-    }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #FB8500;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-} */
+
+
 body{
 	background: #D9D9D9;
 	color: #023047;
@@ -206,26 +166,36 @@ body{
 
 .FAQ{
     height: 450px;
+}
+.FAQ h2{
+    display: flex;
     width: 100%;
     text-align: center;
     padding-top: 50px;
-    display: flex;
     flex-direction: column;
     align-items: center;
-}
-.FAQ h2{
+    color: #FB8500;
     padding-bottom: 30px;
 }
 
-.question{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
+.data{
+    /* display: flex; */
+    margin: auto;
     width: 80%;
     background: #219EBC;
     border: 1px solid #023047;
     padding: 0 20px;
+    
+}
+.answer{
+    display: none;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
 }
 .question p {
     font-size: 16px;
@@ -281,7 +251,9 @@ footer{
 }
 
 .ourprograms{
-    position: relative;
+    display: flex;
+    align-items: center;
+    /* position: relative; */
     background-image: url(../img/our-programs.jpg);
     background-size: cover;
     height: 643px;
@@ -340,6 +312,8 @@ footer{
 }
 .joinus{
     position: relative;
+    display: flex;
+    align-items: center;
     background-image: url(../img/join-us.jpg);
     background-size: cover;
     height: 643px;
@@ -454,28 +428,44 @@ select {
 select:focus{
 	outline: none;
 }
-form a{
+form button{
     padding: 10px 30px;
+    font-size: 24px; 
     background: #023047;
     color: #FB8500;
     font-weight: bold;
     width: 163px;
     align-content: center;
+    margin: auto;
 }
-#error{
+/* #error{
     color: red;
     font-size: 18px;
     letter-spacing: 1px;
     margin-top: 0px;
     margin-bottom: 24px;
     display: none;
-}
+} */
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    height: fit-content;
+    justify-content: center;
+    margin: auto;
+    padding-top: 50px;
+    width: 80%;
+    gap: 50px;
+    
+}
+.gallery .card{
+    height: 500px;
+    width: 300px;
+}
+.gallery .card img{
     width: 100%;
-    padding: 50px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 45px;
+    margin-bottom: 30px;
 }
 /* 
 .signup{
@@ -493,50 +483,51 @@ form a{
     padding-bottom: 20px;
 }
 */
-/* (A) LIGHTBOX BACKGROUND */
-#lightbox {
-    /* (A1) COVERS FULLSCREEN */
-    position: relative; z-index: 999;
-    top: 0; left: 0;
-    width: 100%; height: 100vh;
-   
-    /* (A2) BACKGROUND */
-    /* background: rgba(0, 0, 0, 0.5); */
-   
-    /* (A3) CENTER IMAGE ON SCREEN */
-    display: flex;
-    align-items: center;
-   
-    padding: 50px;
-    /* (A4) HIDDEN BY DEFAULT */
-    visibility: hidden;
-    opacity: 0;
-   
-    /* (A5) SHOW/HIDE ANIMATION */
-    transition: opacity ease 0.4s;
-  }
-   
-  /* (A6) TOGGLE VISIBILITY */
-  #lightbox.show {
-    visibility: visible;
-    opacity: 1;
-  }
-   
-  /* (B) LIGHTBOX IMAGE */
-  #lightbox img {
-    /* (B1) DIMENSIONS */
-    width: 100%;
-    height: auto;
-   
-    /* (B2) IMAGE FIT */
-    /* contain | cover | fill | scale-down */
-    object-fit: cover;
-  }
-   
-  /* (C) LIGHTBOX IMAGE - FULLSCREEN ALTERNATIVE */
-  #lightbox img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
-  
+
+.err{
+    color: red;
+}
+
+
+
+/* .hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-animation: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #FB8500;
+}*/
+@media(max-width:768px){
+
+    /* .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #FB8500;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    } */
+
+    
+} 
