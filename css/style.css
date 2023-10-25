@@ -30,15 +30,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     background-color: #FB8500;
-    padding: 0 24px;
-    
-}
-.nav-menu{
-    /* position: fixed; */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    padding: 0 24px;    
 }
 
 .navbar a{
@@ -59,6 +51,11 @@ body{
     background-size: cover;
     height: 804px;
 }
+
+.welcome{
+   padding-top: 6rem;
+
+}
 .welcome h1{
     margin-top: 76px;
     color: #D9D9D9;
@@ -70,7 +67,6 @@ body{
 	margin-left: 38%; 
 }
 .welcome h2{
-    /* margin-top: 123px; */
     color: #D9D9D9;	
 	text-align: center;
 	margin-left: 38%; 
@@ -116,6 +112,7 @@ body{
 .container{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     padding-top: 50px;
 }
 .container .card{
@@ -236,8 +233,10 @@ footer{
 }
 .quick-links{
     font-weight: 400;
-    color: #023047;
     font-size: 26px;
+}
+.quick-links a{
+    color: #023047;
 }
 .quick-links ul{
     margin-left: 30px;
@@ -388,9 +387,10 @@ input {
 }
 .info{
     display: flex;
+        margin: auto;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 50%;
     padding: 30px;
 }
 .info p{
@@ -461,43 +461,37 @@ form button{
     color: red;
 }
 
-/* 
-.signup{
-    flex-direction: column;   
-    width: 100%;
-    height: 643px;
-    text-align: center;
-    padding-top: 50px;
-    display: flex;  
-    align-items: center;
-}
-.signup h3{
-    font-weight: 700;
-    font-size: 24px;
-    padding-bottom: 20px;
-}
-*/
 
-/* .hamburger{
+.hamburger{
     display: none;
     cursor: pointer;
+    background-color: #FB8500;  
 }
 .bar{
     display: block;
     width: 25px;
     height: 3px;
-    margin: 5px auto;
-    -webkit-animation: all 0.3s ease-in-out;
+    margin-bottom:  5px;
+
+    /* -webkit-animation: all 0.3s ease-in-out; */
     transition: all 0.3s ease-in-out;
-    background-color: #FB8500;
-}*/
+    background-color: #023047;
+}
 
 /* MOBILE */
 @media(max-width:768px){
-
-    /* .hamburger{
-        display: block;
+    
+    .hamburger{
+        display: flex;
+        justify-content: flex-end;
+        height: 60px;
     }
+    .humb{
+        /* margin: 2rem; */
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
     }
@@ -507,50 +501,35 @@ form button{
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #FB8500;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        .navbar{
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            background-color: #FB8500;
-            padding: 0 24px;
-            
-        }
-        .nav-menu{
-            position: fixed;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        
-        .navbar a{
-            font-size: 24px;
-            font-weight: 700;
-            color: #023047;
-            padding: 10px 22px;
-            border-radius: 4px;
-            transition: ease .40s;
-        }
-        .navbar a:hover{
-            background: #219EBC;
-            border-radius: 10px;
-        }
-    } */
 
+    .navbar{
+        display: none;  
+        text-align: center;
+        height: fit-content;
+    }
+    .nav-item{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav.active{
+        display: block;
+    }
+
+    .navbar a{
+        font-size: 18px;
+        padding: 10px 22px;
+        border-radius: 4px;
+        transition: ease .40s;
+    }    
     .logo{
-        width: 80px;
-        height: 80px;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 2%;
+        /* transform: translateX(-50%); */
+        width: 60px;
+        height: 60px;
+
     }
     
     .welcome-pic{
@@ -584,7 +563,6 @@ form button{
     }
   
     .container{
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
@@ -641,6 +619,7 @@ form button{
         font-size: 16px;
         padding-top: 20px;
     }
+    
     .copyright{
         height: fit-content;
         font-size: 16px;
@@ -736,4 +715,245 @@ form button{
         width: 300px;
     }
     
+} 
+
+
+/* TABLET De 768px à 1023px de large.*/
+@media(max-width:1023px) and (min-width: 769px){
+    .hamburger{
+        display: flex;
+        justify-content: flex-end;
+        height: 80px;
+    }
+    .humb{
+        margin: 2rem;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar{
+        display: none;  
+        text-align: center;
+        height: fit-content;
+    }
+    .nav-item{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav.active{
+        display: block;
+    }
+
+    .navbar a{
+        font-size: 18px;
+        padding: 10px 22px;
+        border-radius: 4px;
+        transition: ease .40s;
+    }    
+    .logo{
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 2%;
+        /* transform: translateX(-50%); */
+        width: 80px;
+        height: 80px;
+
+    }
+    
+    .welcome-pic{
+        height: 422px;
+    }
+    .welcome h1{
+        font-size: 50px;
+    }
+    .welcome h2{
+        font-size: 30px;
+    }
+    
+    .rectangle {
+        position: relative;
+        bottom: 0;
+        height: fit-content;
+        width: 100%;
+    }
+    .rectangle h2{
+        font-size: 24px;
+    }
+    .rectangle p{
+        font-size: 20px;    
+    }
+    
+    .discover{
+        height: fit-content;
+    }
+    .discover h2{
+        font-size: 24px;
+    }
+  
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+    .container .card{
+        height: 300px;
+    }
+    .container .card img{
+        height: 215px;
+    }
+    .card a{ 
+        font-size: 18px;
+    }
+    
+    .testimonials{
+        height: fit-content;
+    }
+    .testimonials h2{
+        font-size: 24px;
+    }
+    .testimonials .card-2{
+        width: 300px;
+        height: fit-content; 
+    }
+    .testimonials p{
+        font-size: 20px;
+    }
+    
+    .FAQ{
+        height: fit-content;
+        padding-bottom: 40px;
+    }
+    .FAQ h2{
+        font-size: 20px;
+    }
+    .data{
+        font-size: 20px;
+    }
+     footer{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .foot h2{
+        font-size: 96px;
+        margin: auto;
+    }
+    .foot .description p{
+        margin: auto;
+        width: 90%;
+        font-size: 20px;
+    }
+    .social{
+        justify-content: space-evenly;
+    }
+    .fa-instagram, .fa-facebook, .fa-whatsapp{
+        font-size: 40px;
+    }
+    .quick-links{
+        font-size: 16px;
+        padding-top: 20px;
+    }
+    
+    .copyright{
+        height: fit-content;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .ourprograms{
+        height: 450px;
+    }
+    .ourprograms h1{
+        font-size: 40px;
+    }
+    .boxmma{
+        padding: 10px;
+    }
+    
+    .card p{
+        font-size: 18px;
+    }
+    .cardio{
+        padding: 10px;
+    }
+    .dance{
+        padding: 10px;
+    }
+    .musculation{
+        padding: 10px;
+    }
+    .joinus{
+        height: 450px;
+    }
+    .joinus h1{
+        font-size: 40px;
+    }
+    .plans{
+        font-size: 18px;
+        height: fit-content;
+    }
+    .plans .card-2{
+        height: fit-content;
+    }
+    .plans ul{
+        font-size: 18px;
+    }
+        
+    .dontquit{
+        height: 250px;
+    }
+    .signup{
+        padding-bottom: 0px;
+        font-size: 16px;
+    }
+    .signup h2{
+        padding-bottom: 10px;
+    }
+    form{
+        padding-bottom: 22px;
+    }
+    input {
+        width: 100%;
+        font-size: 17px;    
+    }
+    .info{
+        width: 100%;
+    }
+    .info p{
+        width: 100%;
+    }
+
+    .infoform{ 
+        margin-bottom: 10px;
+    }
+    ::placeholder{
+        font-size: 16px;
+    }
+    select {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    form button{
+        font-size: 16px; 
+    }
+
+    .gallery{
+        gap: 10px;
+        height: fit-content;
+        
+    }
+    .gallery .card{
+        width: 300px;
+    }
+   
 } 

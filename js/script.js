@@ -66,6 +66,20 @@ function validateTEL(tel, errorSpan) {
     }
 }
 
+//Email validation
+function validateEMAIL(email, errorSpan) {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+    if (emailPattern.test(email)) {
+        errorSpan.textContent = "";
+        errorSpan.style.display = "none";
+        return true;
+    } else {
+        errorSpan.textContent = "Please enter a valid E-mail.";
+        errorSpan.style.display = "block";
+        return false;
+    }
+}
+
 // regex
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.regitre-j');
@@ -79,6 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const cinError = document.getElementById('cinError');
         const tel = document.getElementById('tel').value;
         const telError = document.getElementById('telError');
+        const email = document.getElementById('email').value;
+        const emailError = document.getElementById('emailError');
         // const plans = document.getElementById('plans').value;
 
 
@@ -92,11 +108,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if(!validateTEL(tel, telError)){
             event.preventDefault();
         }
+        if(!validateEMAIL(email, emailError)){
+            event.preventDefault();
+        }
     });
 });
 
 //burger Menu
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".humb");
 const navmenu = document.querySelector(".navbar");
 
 hamburger.addEventListener("click",()=>{

@@ -12,26 +12,26 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-menu">
-                <div class="nav-item">
-                    <a class="nav-link" href="./index.html">HOME</a>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-link" href="./gallery.html">GALLERY</a>
-                </div>
-                <img class="logo" src="img/logo.png" alt="logo">
-                <div class="nav-item">
-                    <a class="nav-link" href="./program.html">PROGRAM</a>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-link" href="./joinus.html">JOIN US</a>
-                </div>
+        <div class="hamburger">
+            <div class="humb" >
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        </div>
+        <nav class="navbar">
+            <div class="nav-item">
+                <a class="nav-link" href="./index.html">HOME</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="./gallery.html">GALLERY</a>
+            </div>
+            <img class="logo" src="img/logo.png" alt="logo">
+            <div class="nav-item">
+                <a class="nav-link" href="./program.html">PROGRAM</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="./joinus.html">JOIN US</a>
             </div>
         </nav>
         
@@ -104,6 +104,8 @@
                     <span id="cinError" class="err"></span>
                     <input class="infoform" type="" id="tel" name="Phone" placeholder="Phone Number" >
                     <span id="telError" class="err"></span>
+                    <input class="infoform" type="email" id="email" name="email" placeholder="E-mail" >
+                    <span id="emailError" class="err"></span>
                     <p class="infoform">
                         <select name="plan" id="plans" placeholder="You Chosen Plan" required>
                         <option value="classic offer">Classic Offer</option>
